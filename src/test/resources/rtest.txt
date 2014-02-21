@@ -1,0 +1,16 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Variables ***
+${BROWSER}        firefox
+${DELAY}          0
+${LOGIN URL}      http://127.0.0.1/robottest/
+
+*** Test Cases ***
+Valid Login
+    Open Browser    ${LOGIN URL}    ${BROWSER}
+    Maximize Browser Window
+    Set Selenium Speed    ${DELAY}
+    ${a}    Get Text    id=q1
+    Should Be Equal    ${a}    123
+    [Teardown]    Close Browser
