@@ -4,7 +4,7 @@ Library           Selenium2Library
 *** Variables ***
 ${BROWSER}        firefox
 ${DELAY}          0
-${LOGIN URL}      http://127.0.0.1/robottest/
+${LOGIN URL}      http://127.0.0.1:8080/robottest/
 
 *** Test Cases ***
 Valid Login
