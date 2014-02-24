@@ -49,7 +49,7 @@
           <configuration>
               <url>http://127.0.0.1:8080/manager/text</url>
               <server>test-gui</server>
-              <path>/test-gui</path>
+              <path>/${project.name}</path>
           </configuration>
       </plugin>
     </plugins>
