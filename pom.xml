@@ -115,6 +115,43 @@
           </dependencies>
           -->
       </plugin>
+        <!--
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-failsafe-plugin</artifactId>
+            <version>2.16</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>integration-test</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <forkMode>always</forkMode>
+            </configuration>
+        </plugin>
+        -->
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.2.1</version>
+            <executions>
+                <execution>
+                    <id>step1</id>
+                    <goals>
+                        <goal>exec</goal>
+                    </goals>
+                    <phase>pre-integration-test</phase>
+                    <configuration>
+                        <executable>pybot</executable>
+                        <arguments>
+                            <argument>src/test/resources/rtest.txt</argument>
+                        </arguments>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
     </plugins>
   </build>
 </project>
