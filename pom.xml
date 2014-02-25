@@ -87,11 +87,9 @@
                       <goal>run-war-only</goal>
                   </goals>
                   <phase>pre-integration-test</phase>
-                  <!--
                   <configuration>
                       <fork>true</fork>
                   </configuration>
-                  -->
               </execution>
               <execution>
                   <id>tomcat-shutdown</id>
